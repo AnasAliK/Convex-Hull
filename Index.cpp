@@ -58,16 +58,16 @@ void BruteForce(int length,int X[], int Y[]){
 void exportInputToCSV(const string& filename, int length, int X[], int Y[]) {
     ofstream file(filename);
     if (file.is_open()) {
-        file << "X,Y\n"; // CSV header
+        file << "X,Y\n"; //CSV header
         for (int i = 0; i < length; i++) {
             file << X[i] << "," << Y[i] << "\n";
         }
         file.close();
     } else {
-        cerr << "Unable to open file for writing: " << filename << endl;
+        cerr<<"Unable to open file for writing: "<<filename<<endl;
     }
 }
-//export convex hull points to CSV
+//export output points to CSV
 void exportOutputToCSV(const string& filename) {
     ofstream file(filename);
     if (file.is_open()) {
