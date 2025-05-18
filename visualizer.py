@@ -2,6 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
+# Had to sort output points to ensure correct boundaries.
+
 # Load the input points and convex hull points from CSV files
 input_points = pd.read_csv('input_points.csv')
 hull_points = pd.read_csv('convex_hull_points.csv')
