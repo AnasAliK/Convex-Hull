@@ -20,12 +20,12 @@ void random_list(Point points[],int length, int X[], int Y[], int seed = 0, int 
 
 int main(){
 	
-	const int length = 200;
+	const int length = 10000;
     int X[length];
     int Y[length];
     int seed = time(0);
     int start = 0;
-    int end = 10;
+    int end = 1000;
     Point points[length];
     random_list(points,length, X, Y, seed, start, end);
 
@@ -47,7 +47,8 @@ int main(){
         cout << "(" << hull[i].x << ", " << hull[i].y << ")\n";
     }
     cout<<"\nTotal Time Taken By Quick Hull :" <<duration.count() << " microseconds\n";
-    exportInputToCSV("inputPoints.csv", length, points);
+  
+	exportInputToCSV("inputPoints.csv", length, points);
     exportOutputToCSV("hullPoints.csv", hullSize, hull);
 	
 	cout<<endl<<"Brute Force : \n";

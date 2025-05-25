@@ -38,7 +38,7 @@ if len(sorted_hull_points) > 1:
              color='red', linestyle='-', linewidth=2)
 
 # Set plot title and labels
-plt.title('Convex Hull Visualization')
+plt.title('Convex Hull Visualization (Brute Force Method)')
 plt.xlabel('X-axis')
 plt.ylabel('Y-axis')
 plt.axhline(0, color='black', linewidth=0.5, ls='--')

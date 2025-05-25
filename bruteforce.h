@@ -1,5 +1,6 @@
 using namespace std;
 
+//In a brute-force approach for convex hull problems, every possible subset of points is checked to determine whether it forms the boundary of the convex hull.
 
 set<pair<int, int>> convexHull;
 

@@ -1,5 +1,7 @@
 using namespace std;
 
+//In the QuickHull algorithm, collinear points are generally ignored when forming the convex hull.
+
 struct Point {
     int x, y;
 };
