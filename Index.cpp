@@ -5,6 +5,8 @@
 using namespace std;
 using namespace std::chrono;
 
+//add additional commands "-static-libgcc  -Wl,--stack=20000000" for Lenght equal or above 100000
+
 //input generator
 void random_list(Point points[],int length, int X[], int Y[], int seed = 0, int start = 0, int end = INT_MAX) {
     srand(seed); 
@@ -19,13 +21,18 @@ void random_list(Point points[],int length, int X[], int Y[], int seed = 0, int 
 
 
 int main(){
-	
-	const int length = 10000;
+	cout<<"Convex Hull\n";
+	int n,s,e;
+	cout<<"Enter No. of Points : ";
+	cin>>n;
+	cout<<"Enter Distance Range of the Points : ";
+	cin>>s>>e;
+	const int length = n;
     int X[length];
     int Y[length];
     int seed = time(0);
-    int start = 0;
-    int end = 1000;
+    int start = s;
+    int end = e;
     Point points[length];
     random_list(points,length, X, Y, seed, start, end);
 
